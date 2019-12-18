@@ -1,0 +1,60 @@
+
+<style>
+table {
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 100%;
+}
+
+td, th {
+border: 1px solid #dddddd;
+text-align: left;
+padding: 8px;
+}
+input[type=text]:focus {
+background-color: #ddd;
+outline: none;
+}
+
+tr:nth-child(even) {
+background-color: #dddddd;
+}
+a {
+text-decoration: none;
+color: inherit;
+}
+img{
+    width: 100px;
+    height: 150px;
+}
+</style>
+
+<table>
+<tr>
+    <th>Book title</th>
+    <th>Book Author</th>
+    <th>ISBN</th>
+    <th>Book Volume</th>
+    <th>Borrowed</th>
+</tr>
+<tr>
+    <td>{{Book.title}}</td>
+    <td>{{Book.author}}</td>
+    <td>{{Book.issn}}</td>
+    <td>{{Book.vol}}</td>
+    <td>{{Book.status}}</td>
+</tr>
+<td></td><img src="{{ Book.coverImage}}" alt=""></td>
+
+
+<td></td><button><a href="/viewBook/">BACK</a></button></td>
+<!-- <td>   <form action="/deleteBook/" 
+        style = "display: inline;"
+        method = "post">{% csrf_token %}
+           
+            <input type="submit" value="Delete"/>
+        </form></td>
+
+        <td><button><a href = "">EDIT</a></button></td> -->
+
+</table>

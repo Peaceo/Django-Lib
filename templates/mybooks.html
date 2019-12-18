@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <style>
+            table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+a { text-decoration: none !important;
+    color: inherit
+     }
+        </style>
+    </head>
+    <body>
+
+            <h1>Catalog of Books</h1>
+            
+            <table>
+                <tr>
+                    <th>Books</th>
+                    <th>Availability</th>
+                </tr>
+                {% for book in Book%}
+            <tr>
+                    
+            <td>{{book.title}}</td> 
+            <td><button><a href = "/detail/{{book.id}}/">view details</a></button></td>                
+                    
+            </tr>
+                {%endfor%}
+            </table>
+    </body>
+</html>
